@@ -10,13 +10,8 @@ function App() {
   return (
     <div className="app">
       <header className="app__hero">
-        <p className="app__eyebrow">Board Nocturnas</p>
-        <h1 className="app__title">Ranking de competencias</h1>
-        <p className="app__desc">
-          Añade un archivo <code>.csv</code> por competencia en{' '}
-          <code>src/data/</code>. El ranking general suma puntos y penalizaciones
-          de todas.
-        </p>
+        <p className="app__eyebrow">Board</p>
+        <h1 className="app__title">Ranking de competencias Nocturnas</h1>
       </header>
 
       <section className="app__section app__section--general">

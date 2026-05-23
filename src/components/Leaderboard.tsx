@@ -1,6 +1,12 @@
 import type { TeamEntry } from '../types'
 import './Leaderboard.css'
 
+const PODIUM_MEDALS: Record<number, string> = {
+  1: '🥇',
+  2: '🥈',
+  3: '🥉',
+}
+
 interface LeaderboardProps {
   title: string
   subtitle?: string
@@ -46,7 +52,20 @@ export function Leaderboard({
                     entry.rank <= highlightTop ? `board__row--top-${entry.rank}` : ''
                   }
                 >
-                  <td className="board__rank">{entry.rank}</td>
+                  <td className="board__rank">
+                    {entry.rank <= highlightTop && PODIUM_MEDALS[entry.rank] ? (
+                      <span
+                        className={`board__medal board__medal--${entry.rank}`}
+                        aria-label={`Puesto ${entry.rank}`}
+                      >
+                        <span className="board__medal-emoji" aria-hidden="true">
+                          {PODIUM_MEDALS[entry.rank]}
+                        </span>
+                      </span>
+                    ) : (
+                      <span className="board__rank-num">{entry.rank}</span>
+                    )}
+                  </td>
                   <td className="board__team">{entry.team}</td>
                   <td className="board__score">{entry.score}</td>
                   <td className="board__penalty">{entry.penalty}</td>
