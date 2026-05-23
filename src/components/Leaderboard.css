@@ -1,0 +1,117 @@
+.board {
+  background: linear-gradient(160deg, rgba(30, 24, 48, 0.95), rgba(18, 16, 32, 0.98));
+  border: 1px solid rgba(167, 139, 250, 0.22);
+  border-radius: 1rem;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.03) inset,
+    0 18px 40px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+}
+
+.board__header {
+  padding: 1.25rem 1.5rem 1rem;
+  border-bottom: 1px solid rgba(167, 139, 250, 0.15);
+}
+
+.board__title {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #f5f3ff;
+}
+
+.board__subtitle {
+  margin: 0.35rem 0 0;
+  font-size: 0.9rem;
+  color: rgba(196, 181, 253, 0.75);
+}
+
+.board__table-wrap {
+  overflow-x: auto;
+}
+
+.board__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+}
+
+.board__table th,
+.board__table td {
+  padding: 0.85rem 1.25rem;
+  text-align: left;
+}
+
+.board__table th {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(196, 181, 253, 0.7);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.board__table tbody tr {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  transition: background 0.15s ease;
+}
+
+.board__table tbody tr:hover {
+  background: rgba(167, 139, 250, 0.08);
+}
+
+.board__rank {
+  width: 3rem;
+  font-weight: 700;
+  color: #c4b5fd;
+}
+
+.board__team {
+  font-weight: 600;
+  color: #faf5ff;
+}
+
+.board__score,
+.board__penalty {
+  text-align: right;
+  font-weight: 600;
+}
+
+.board__score {
+  color: #a7f3d0;
+}
+
+.board__penalty {
+  color: #fca5a5;
+}
+
+.board__row--top-1 {
+  background: linear-gradient(90deg, rgba(250, 204, 21, 0.12), transparent);
+}
+
+.board__row--top-2 {
+  background: linear-gradient(90deg, rgba(203, 213, 225, 0.1), transparent);
+}
+
+.board__row--top-3 {
+  background: linear-gradient(90deg, rgba(251, 146, 60, 0.1), transparent);
+}
+
+.board__row--top-1 .board__rank::after {
+  content: ' 🥇';
+}
+
+.board__row--top-2 .board__rank::after {
+  content: ' 🥈';
+}
+
+.board__row--top-3 .board__rank::after {
+  content: ' 🥉';
+}
+
+.board__empty {
+  text-align: center;
+  color: rgba(196, 181, 253, 0.6);
+  padding: 2rem !important;
+}
