@@ -49,14 +49,20 @@ npm run preview
 
 ## Despliegue en GitHub Pages
 
-La app se publica automáticamente al hacer push a `main` (workflow en `.github/workflows/deploy.yml`).
+El workflow sube el build a la rama `gh-pages`. Cada push a `main` vuelve a desplegar.
 
 **URL:** https://programacioncompetitivaufps.github.io/BoardNocturnas/
 
-### Primera vez (en el repositorio de GitHub)
+### Activar Pages (obligatorio la primera vez)
 
-1. **Settings → Pages → Build and deployment**
-2. En **Source**, elige **GitHub Actions** (no la rama `gh-pages`).
-3. Haz push a `main`; el workflow construye y despliega.
+El error `Failed to create deployment (status: 404)` aparece si **Pages no está activado** en el repo.
 
-Para forzar un despliegue manual: **Actions → Deploy to GitHub Pages → Run workflow**.
+1. Abre [Settings → Pages](https://github.com/ProgramacionCompetitivaUFPS/BoardNocturnas/settings/pages).
+2. En **Build and deployment → Source**, elige **Deploy from a branch**.
+3. **Branch:** `gh-pages` · **Folder:** `/ (root)` · Guardar.
+4. Ejecuta el workflow: **Actions → Deploy to GitHub Pages → Run workflow** (o haz un push a `main`).
+
+Si no ves la sección Pages, un admin de la organización debe permitir GitHub Pages en  
+[Organization settings → Member privileges → Pages](https://github.com/organizations/ProgramacionCompetitivaUFPS/settings/member_privileges).
+
+Tras el primer despliegue correcto, la web puede tardar 1–2 minutos en estar disponible.
