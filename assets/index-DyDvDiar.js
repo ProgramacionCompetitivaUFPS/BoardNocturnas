@@ -13,4 +13,19 @@ Error generating stack: `+e.message+`
 4	Mersault09	4	339
 5	sebastianpn	3	192
 6	IamJM_23	2	103
-`});function S(e){return(e.split(`/`).pop()??e).replace(/\.csv$/i,``)}function C(e){let t=S(e),n=t.match(/^nocturna[-_]?(\d+)$/i);return n?`Noctura #${n[1]}`:t.replace(/[-_]+/g,` `).replace(/\b\w/g,e=>e.toUpperCase())}function te(e){let t=S(e).match(/^nocturna[-_]?(\d+)$/i);return t?Number(t[1]):2**53-1}function ne(){return Object.entries(ee).map(([e,t])=>({id:S(e),name:C(e),entries:b(t)})).sort((e,t)=>te(e.id)-te(t.id)||e.name.localeCompare(t.name,`es`))}var re=ne(),w=x(re);function ie(){return(0,f.jsxs)(`div`,{className:`app`,children:[(0,f.jsxs)(`header`,{className:`app__hero`,children:[(0,f.jsx)(`p`,{className:`app__eyebrow`,children:`Board`}),(0,f.jsx)(`h1`,{className:`app__title`,children:`Ranking de competencias Nocturnas`})]}),(0,f.jsx)(`section`,{className:`app__section app__section--general`,children:(0,f.jsx)(m,{title:`Ranking general`,subtitle:`Suma de ${re.length} competencia${re.length===1?``:`s`}`,entries:w})}),re.length>0?(0,f.jsxs)(`section`,{className:`app__section`,children:[(0,f.jsx)(`h2`,{className:`app__section-title`,children:`Por competencia`}),(0,f.jsx)(`div`,{className:`app__grid`,children:re.map(e=>(0,f.jsx)(m,{title:e.name,entries:e.entries},e.id))})]}):(0,f.jsxs)(`p`,{className:`app__hint`,children:[`No hay CSV en `,(0,f.jsx)(`code`,{children:`src/data/`}),`. Crea uno con columnas Rank, Team, Score y Penalty.`]})]})}(0,u.createRoot)(document.getElementById(`root`)).render((0,f.jsx)(l.StrictMode,{children:(0,f.jsx)(ie,{})}));
+`,"../data/nocturna-2.csv":`Rank,Team,Score,Penalty
+1,TheRealOneAle,7,167
+2,SushiTrash,7,202
+3,sebastianpn,7,212
+4,Gabriel_Torres01,7,244
+5,Mersault09,7,262
+6,Prepotente,7,269
+7,IamJM_23,7,270
+8,PedroRaul25,6,233`,"../data/nocturna-3.csv":`Rank,Team,Score,Penalty
+1,Mersault09,7,253
+2,SushiTrash,7,276
+3,sebastianpn,7,343
+4,IamJM_23,7,345
+5,BeymarVe,7,394
+6,PedroRaul25,6,235
+7,TheRealOneAle,5,137`});function S(e){return(e.split(`/`).pop()??e).replace(/\.csv$/i,``)}function C(e){let t=S(e),n=t.match(/^nocturna[-_]?(\d+)$/i);return n?`Noctura #${n[1]}`:t.replace(/[-_]+/g,` `).replace(/\b\w/g,e=>e.toUpperCase())}function te(e){let t=S(e).match(/^nocturna[-_]?(\d+)$/i);return t?Number(t[1]):2**53-1}function ne(){return Object.entries(ee).map(([e,t])=>({id:S(e),name:C(e),entries:b(t)})).sort((e,t)=>te(e.id)-te(t.id)||e.name.localeCompare(t.name,`es`))}var re=ne(),w=x(re);function ie(){return(0,f.jsxs)(`div`,{className:`app`,children:[(0,f.jsxs)(`header`,{className:`app__hero`,children:[(0,f.jsx)(`p`,{className:`app__eyebrow`,children:`Board`}),(0,f.jsx)(`h1`,{className:`app__title`,children:`Ranking de competencias Nocturnas`})]}),(0,f.jsx)(`section`,{className:`app__section app__section--general`,children:(0,f.jsx)(m,{title:`Ranking general`,subtitle:`Suma de ${re.length} competencia${re.length===1?``:`s`}`,entries:w})}),re.length>0?(0,f.jsxs)(`section`,{className:`app__section`,children:[(0,f.jsx)(`h2`,{className:`app__section-title`,children:`Por competencia`}),(0,f.jsx)(`div`,{className:`app__grid`,children:re.map(e=>(0,f.jsx)(m,{title:e.name,entries:e.entries},e.id))})]}):(0,f.jsxs)(`p`,{className:`app__hint`,children:[`No hay CSV en `,(0,f.jsx)(`code`,{children:`src/data/`}),`. Crea uno con columnas Rank, Team, Score y Penalty.`]})]})}(0,u.createRoot)(document.getElementById(`root`)).render((0,f.jsx)(l.StrictMode,{children:(0,f.jsx)(ie,{})}));
